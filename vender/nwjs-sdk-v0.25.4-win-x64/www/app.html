@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Involt</title>
+	<!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />-->
+	<script src="core/jquery/jquery-2.1.0.min.js"></script>
+	<script src="core/jquery/jquery.nouislider.min.js"></script>
+	<script src="core/jquery/jquery.knob.js"></script>
+	<script src="core/jquery/insQ.min.js"></script>
+	<script src="settings.js"></script>
+	<script src="core/bridge.js"></script>
+	<script src="core/framework.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/framework.css">
+	<style>
+		.square {
+			margin: 200px auto;
+			width: 200px;
+			height: 200px;
+			background: gray;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="square"></div>
+
+
+</body>
+<script>
+	involtListenForPin[0] = function (index, value) {
+		$(".square").css({
+
+			"width": value,
+			"height": value
+
+		});
+	};
+
+	involtListenForPin[1] = function (index, value) {
+		$(".square").css({
+
+			"transform": "rotate(" + value + "deg)"
+
+		});
+	};
+</script>
+
+</html>
